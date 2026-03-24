@@ -4,14 +4,27 @@ let div=document.getElementById("budgetResults");
 //monthly savgs
 let mnthly_savings=income_inpt-expense_inpt;
 let prgect_savings=mnthly_savings*nmb_mnths;
+div.appendChild(prgect_savings.toFixed(2))
 //ask for the info
+//Gaining usrs monthly interst
+let income_inpt=window.prompt("What is your monthly income");
+//seting the inpt to be a number
+income_inpt=Number(income_inpt);
+div.appendChild(p_incm.toFixed(2));
+//Repeating for the rest
+let expense_inpt=window.prompt("What is monthly expenses");
+expense_inpt=Number(expense_inpt);
+div.appendChild(p_exps.toFixed(2));
+let nmb_mnths=window.prompt("what is the number of months your budgeting for");
+nmb_mnths=Number(nmb_mnths);
+div.appendChild(nmb_mnths.toFixed(2));
 
 //defing budget_calc
 function budget_calc(){
     console.log("testing");
     let p = document.createElement('p');
     if (isNaN(income_inpt)||isNaN(expense_inpt)||isNaN(nmb_mnths)){
-        alert("Please enter a number for all questions")
+        alert("Please enter a number for all questions");
     }
     try{
         //testing all my code
@@ -31,3 +44,4 @@ function budget_calc(){
     };
 
 };
+
