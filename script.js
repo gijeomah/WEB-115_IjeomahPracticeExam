@@ -1,4 +1,4 @@
-let btn = document.getElementById("CalculateBudget");
+let btn = document.getElementById("calculateBudget");
 btn.addEventListener('click', budget_calc);
 let div=document.getElementById("budgetResults");
 //monthly savgs
